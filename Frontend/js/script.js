@@ -253,7 +253,7 @@
   const RECYCLING_DATA = [
     {
       id: "plastic", icon: "♻",
-      en: { name: "Plastic", desc: "Bottles, containers, packaging film.",
+      en: { name: "Plastic", desc: "Bottles, containers, packaging film.", video: "https://www.youtube.com/watch?v=Z3Ava2TUSC8",
             howTo: "Rinse thoroughly, remove caps, flatten where possible. Check the recycling number (#1–7) on the bottom.",
             steps: ["Rinse containers with water", "Remove caps and labels if possible", "Place in dry recyclables bin"],
             tips: "Can be repurposed as planters, storage containers, or DIY organizers." },
@@ -264,7 +264,7 @@
     },
     {
       id: "paper", icon: "📄",
-      en: { name: "Paper", desc: "Newspapers, documents, envelopes.",
+      en: { name: "Paper", desc: "Newspapers, documents, envelopes.", video:"https://www.youtube.com/watch?v=jAqVxsEgWIM" ,
             howTo: "Keep dry, remove staples and tape. Contaminated (greasy/wet) paper goes in trash.",
             steps: ["Remove staples, tape, plastic windows", "Keep dry — wet paper can't be recycled", "Bundle and place in paper recycling"],
             tips: "Shred for compost, use as gift wrap, or donate to schools for art projects." },
@@ -275,7 +275,7 @@
     },
     {
       id: "glass", icon: "🍾",
-      en: { name: "Glass", desc: "Jars, bottles, broken glassware.",
+      en: { name: "Glass", desc: "Jars, bottles, broken glassware.", video:"https://www.youtube.com/watch?v=6R8YObQbE88" ,
             howTo: "Rinse, sort by color if required by your local facility (clear, green, brown).",
             steps: ["Rinse thoroughly", "Remove metal lids and caps", "Sort by color if necessary"],
             tips: "Repurpose as candle holders, vases, or storage jars." },
@@ -286,7 +286,7 @@
     },
     {
       id: "metal", icon: "🔩",
-      en: { name: "Metal", desc: "Cans, foil, small hardware.",
+      en: { name: "Metal", desc: "Cans, foil, small hardware.", video:"https://www.youtube.com/watch?v=_ErocQ2S080" ,
             howTo: "Rinse cans, flatten aluminum cans if possible, bundle small items.",
             steps: ["Rinse food/beverage cans", "Flatten to save space", "Place in metal recycling bin"],
             tips: "Great for DIY planters, tool organizers, or art projects." },
@@ -297,7 +297,7 @@
     },
     {
       id: "cardboard", icon: "📦",
-      en: { name: "Cardboard", desc: "Boxes, cartons, packaging.",
+      en: { name: "Cardboard", desc: "Boxes, cartons, packaging.", video:"https://www.youtube.com/watch?v=yCPeElrhbIQ" ,
             howTo: "Flatten boxes, keep dry, remove tape and labels. Waxed cardboard is not recyclable.",
             steps: ["Flatten all boxes", "Remove tape, labels, foam inserts", "Keep dry and stack for pickup"],
             tips: "Perfect for shipping, storage, or kids' craft projects." },
@@ -308,7 +308,7 @@
     },
     {
       id: "organic", icon: "🍎",
-      en: { name: "Organic Waste", desc: "Food scraps, garden trimmings.",
+      en: { name: "Organic Waste", desc: "Food scraps, garden trimmings.", video:"https://www.youtube.com/watch?v=X_xf25QWry4" ,
             howTo: "Compost at home or use municipal organic collection. Avoid meat, dairy, oils in home compost.",
             steps: ["Separate food scraps from trash", "Add to compost bin or collection", "Turn compost regularly for faster breakdown"],
             tips: "Finished compost enriches garden soil. Biogas from organic waste can generate energy." },
@@ -319,7 +319,7 @@
     },
     {
       id: "ewaste", icon: "📱",
-      en: { name: "E-Waste", desc: "Cables, batteries, old devices.",
+      en: { name: "E-Waste", desc: "Cables, batteries, old devices.", video:"https://www.youtube.com/watch?v=Ey-qPao1Wms" ,
             howTo: "Drop at certified e-waste collection centers. Never throw in regular trash — contains toxic materials.",
             steps: ["Locate certified e-waste center", "Wipe personal data from devices", "Drop off or schedule pickup"],
             tips: "Donate working devices. Many components can be salvaged and refurbished." },
@@ -330,7 +330,7 @@
     },
     {
       id: "fabric", icon: "👕",
-      en: { name: "Fabric / Textiles", desc: "Old clothing, linens, textiles.",
+      en: { name: "Fabric / Textiles", desc: "Old clothing, linens, textiles.", video:"https://www.youtube.com/watch?v=nvQI4MWQgNY" ,
             howTo: "Donate wearable items. Send damaged textiles to textile recycling facilities.",
             steps: ["Wash and dry items", "Donate wearable clothing to charities", "Recycle damaged textiles at drop-off centers"],
             tips: "Cut into cleaning rags, make patchwork, or repurpose as tote bags." },
@@ -341,7 +341,7 @@
     },
     {
       id: "rubber", icon: "⚙",
-      en: { name: "Rubber / Tires", desc: "Tires, rubber soles, seals.",
+      en: { name: "Rubber / Tires", desc: "Tires, rubber soles, seals.", video:"https://www.youtube.com/watch?v=mZwRdeQR4eQ&t=54s" ,
             howTo: "Take to specialized rubber recycling centers. Some tire shops accept old tires for free.",
             steps: ["Contact local rubber recycling center", "Transport tires responsibly", "Some shops accept for free disposal"],
             tips: "Can be repurposed as flooring, garden mulch, or DIY mats." },
@@ -352,7 +352,7 @@
     },
     {
       id: "mixed", icon: "🗑",
-      en: { name: "Mixed Waste", desc: "Multi-material or unclear items.",
+      en: { name: "Mixed Waste", desc: "Multi-material or unclear items.", video:"https://www.youtube.com/watch?v=hYoU4NKcSBQ" ,
             howTo: "Separate components where possible (e.g., remove metal from plastic). Check with local facility.",
             steps: ["Try to separate different materials", "Check local guidelines for mixed materials", "When in doubt, ask facility staff"],
             tips: "Many mixed items can be creatively repurposed case-by-case." },
@@ -903,14 +903,32 @@
       const steps = info.steps.map((s, i) =>
         `<div class="guide-step"><span class="guide-step-num">${i+1}</span><span>${s}</span></div>`).join("");
       return `<div class="guide-card reveal in">
-        <div class="guide-head"><div class="guide-icon">${d.icon}</div><div class="guide-name">${info.name}</div></div>
-        <p class="guide-desc">${info.desc}</p>
-        <div class="guide-section-title">${howToLabel}</div>
-        <div class="guide-tips">${info.howTo}</div>
-        <div class="guide-steps">${steps}</div>
-        <div class="guide-section-title" style="margin-top:12px">${reuseLabel}</div>
-        <div class="guide-tips">${info.tips}</div>
-      </div>`;
+  <div class="guide-head">
+    <div class="guide-icon">${d.icon}</div>
+    <div class="guide-name">${info.name}</div>
+  </div>
+
+  <p class="guide-desc">${info.desc}</p>
+
+  <div class="guide-section-title">${howToLabel}</div>
+  <div class="guide-tips">${info.howTo}</div>
+
+  <div class="guide-steps">${steps}</div>
+
+  <div class="guide-section-title" style="margin-top:12px">${reuseLabel}</div>
+  <div class="guide-tips">${info.tips}</div>
+
+  ${
+    info.video
+      ? `<div style="margin-top:16px;">
+          <button class="btn btn-primary watch-video-btn"
+        onclick="window.open('${info.video}', '_blank')">
+  ▶ Watch Recycling Video
+</button>
+        </div>`
+      : ""
+  }
+</div>`;
     }).join("");
   }
 

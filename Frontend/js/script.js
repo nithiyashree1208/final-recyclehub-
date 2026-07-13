@@ -918,6 +918,8 @@
   <div class="guide-section-title" style="margin-top:12px">${reuseLabel}</div>
   <div class="guide-tips">${info.tips}</div>
 
+
+  
   ${
     info.video
       ? `<div style="margin-top:16px;">
